@@ -15,11 +15,15 @@ Plug 'Yggdroot/indentLine'
 Plug 'vim-syntastic/syntastic'
 Plug 'lifepillar/vim-solarized8'
 Plug 'tpope/vim-eunuch'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
 "-------------------------------FuzzyFileFinder--------------------
 set runtimepath^=~/.vim/plugged/ctrlp.vim
+
+"--------------------------------emmet-vim--------------------------
+let g:user_emmet_leader_key='<C-E>'
 
 "----------------------------------Powerline for vim----------------------
 set rtp+=/usr/local/lib/python3.5/dist-packages/powerline/bindings/vim/
@@ -44,7 +48,7 @@ set number
 
 
 "--------------------------------KeyMappings--------------------------------
-:inoremap jk <esc>
+:inoremap jj <esc>
 
 "--------------------------------UI Shit-------------------------------------
 :set guioptions-=m  "remove menu bar
