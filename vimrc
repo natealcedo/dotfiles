@@ -40,11 +40,10 @@ colorscheme solarized8_dark
 "-----------------------------------Basic Settings------------------------
 
 filetype plugin indent on
-set tabstop=8 
-set softtabstop=0 
-set expandtab 
-set shiftwidth=4 
-set smarttab
+filetype plugin indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
 set number
 set relativenumber
 
