@@ -16,6 +16,9 @@ Plug 'vim-syntastic/syntastic'
 Plug 'lifepillar/vim-solarized8'
 Plug 'tpope/vim-eunuch'
 Plug 'mattn/emmet-vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'ternjs/tern_for_vim'
+Plug 'danro/rename.vim'
 
 call plug#end()
 
@@ -29,17 +32,17 @@ let g:user_emmet_leader_key='<C-E>'
 set rtp+=/usr/local/lib/python3.5/dist-packages/powerline/bindings/vim/
 set laststatus=2
 "-----------------------------------Basic Indenting------------------------
-let g:indentLine_char = '.'
+let g:indentLine_char = '|'
+let delimitMate_expand_cr=1
 
 "------------------------------------Theme---------------------------------
-syntax on
+syntax enable 
 set t_Co=256
 let g:solarized_termcolors=16
 colorscheme solarized8_dark
 
 "-----------------------------------Basic Settings------------------------
 
-filetype plugin indent on
 filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
