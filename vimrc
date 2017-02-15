@@ -40,12 +40,13 @@ colorscheme solarized8_dark
 "-----------------------------------Basic Settings------------------------
 
 filetype plugin indent on
-set tabstop=4       
-set expandtab
-set shiftwidth=4
-set relativenumber
+set tabstop=8 
+set softtabstop=0 
+set expandtab 
+set shiftwidth=4 
+set smarttab
 set number
-
+set relativenumber
 
 "--------------------------------KeyMappings--------------------------------
 :inoremap jj <esc>
