@@ -1,9 +1,4 @@
-"Powerline Settings
-
-set nocompatible              
-filetype off                 
-
-"Vim Plug
+"---------------------------Vim Plug------------------------------------
 call plug#begin('~/.vim/plugged')
 
 Plug 'jelera/vim-javascript-syntax'
@@ -31,16 +26,16 @@ let g:user_emmet_leader_key='<C-E>'
 "----------------------------------Powerline for vim----------------------
 set rtp+=/usr/local/lib/python3.5/dist-packages/powerline/bindings/vim/
 set laststatus=2
+set nocompatible              
+filetype off                 
+
 "-----------------------------------Basic Indenting------------------------
 let g:indentLine_char = '|'
 let delimitMate_expand_cr=1
 
 "------------------------------------Theme---------------------------------
-syntax enable 
-set t_Co=256
-let g:solarized_termcolors=16
+syntax enable
 colorscheme solarized8_dark
-
 "-----------------------------------Basic Settings------------------------
 
 filetype plugin indent on
@@ -78,5 +73,8 @@ let g:syntastic_warning_symbol = '⚠️'
 let g:syntastic_style_warning_symbol = '💩'
 
 
+"--------------------------------ternjs---------------------------------
+autocmd CompleteDone * pclose
 
-
+"---------------------------------disable swapfile-------------------------
+set noswapfile
