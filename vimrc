@@ -15,6 +15,8 @@ Plug 'ternjs/tern_for_vim'
 Plug 'danro/rename.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'chriskempson/base16-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -24,11 +26,12 @@ set runtimepath^=~/.vim/plugged/ctrlp.vim
 "--------------------------------emmet-vim--------------------------
 let g:user_emmet_leader_key='<C-E>'
 
-"----------------------------------Powerline for vim----------------------
-set rtp+=/usr/local/lib/python3.5/dist-packages/powerline/bindings/vim/
+"----------------------------------Airline for vim----------------------
 set laststatus=2
 set nocompatible              
 filetype off                 
+let g:airline_theme='base16'
+let g:airline_powerline_fonts = 1
 
 "-----------------------------------Basic Indenting------------------------
 let g:indentLine_char = '|'
