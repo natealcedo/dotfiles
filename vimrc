@@ -1,6 +1,7 @@
+"----------------------------Setup for vim -------------------------------
 set nocompatible              
 filetype off                 
-set rtp+=~/.vim/
+set rtp+=~/.vim/plugged
 "---------------------------Vim Plug------------------------------------
 call plug#begin('~/.vim/plugged')
 
@@ -13,7 +14,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'vim-syntastic/syntastic'
 Plug 'tpope/vim-eunuch'
 Plug 'mattn/emmet-vim'
-Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
 Plug 'danro/rename.vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -22,6 +22,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'SirVer/ultisnips'
+Plug 'Valloric/YouCompleteMe'
+Plug 'duggiefresh/vim-easydir'
 
 call plug#end()
 
@@ -46,9 +48,10 @@ colorscheme base16-default-dark
 filetype plugin indent on
 set number
 set relativenumber
-"
+
 "--------------------------------KeyMappings--------------------------------
 :inoremap jj <esc>
+let mapleader = ","
 
 "--------------------------------UI Shit-------------------------------------
 :set guioptions-=m  "remove menu bar
@@ -80,6 +83,8 @@ let g:multi_cursor_prev_key='<C-k>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
+"----------------------------controlp------------------------------------
+set wildignore+=**/bower_components/*,**/node_modules/*,**/tmp/*,**/assets/images/*,**/assets/fonts/*,**/public/images/*
 "--------------------------------ternjs---------------------------------
 autocmd CompleteDone * pclose
 
@@ -90,7 +95,9 @@ set noswapfile
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-let g:UltiSnipsSnippetsDir        = $HOME.'/.vim/UltiSnips/'
+let g:UltiSnipsSnippetsDir        = $HOME.'/.vim/plugged/UltiSnips'
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
+"-------------------------------------Create/open file in curren folder
+map <Leader>ee :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
 
