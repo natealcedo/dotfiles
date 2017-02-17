@@ -8,12 +8,13 @@ Plug 'crusoexia/vim-javascript-lib'
 Plug 'kien/ctrlp.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-syntastic/syntastic'
-Plug 'lifepillar/vim-solarized8'
 Plug 'tpope/vim-eunuch'
 Plug 'mattn/emmet-vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'ternjs/tern_for_vim'
 Plug 'danro/rename.vim'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -35,7 +36,8 @@ let delimitMate_expand_cr=1
 
 "------------------------------------Theme---------------------------------
 syntax enable
-colorscheme solarized8_dark
+let base16colorspace=256 
+colorscheme base16-default-dark
 "-----------------------------------Basic Settings------------------------
 
 filetype plugin indent on
@@ -72,6 +74,11 @@ let g:syntastic_style_error_symbol = '⁉️'
 let g:syntastic_warning_symbol = '⚠️'
 let g:syntastic_style_warning_symbol = '💩'
 
+"-----------------------------vim-multipl-cursors--------------------------------
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-k>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
 
 "--------------------------------ternjs---------------------------------
 autocmd CompleteDone * pclose
