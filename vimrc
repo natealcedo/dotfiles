@@ -37,12 +37,14 @@ let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 
 "-----------------------------------Basic Indenting------------------------
-let g:indentLine_char = '|'
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+let delimitMate_expand_cr=1
+
+
 "------------------------------------Theme---------------------------------
 syntax enable
 let base16colorspace=256 
-colorscheme base16-default-dark
+colorscheme base16-google-dark
 "-----------------------------------Basic Settings------------------------
 
 filetype plugin indent on
