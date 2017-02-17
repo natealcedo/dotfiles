@@ -39,7 +39,7 @@ let g:airline_powerline_fonts = 1
 "-----------------------------------Basic Indenting------------------------
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 let delimitMate_expand_cr=1
-
+let g:indentLine_char = '|'
 
 "------------------------------------Theme---------------------------------
 syntax enable
