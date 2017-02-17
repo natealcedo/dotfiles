@@ -44,7 +44,7 @@ let g:indentLine_char = '|'
 "------------------------------------Theme---------------------------------
 syntax enable
 let base16colorspace=256 
-colorscheme base16-google-dark
+colorscheme base16-default-dark
 "-----------------------------------Basic Settings------------------------
 
 filetype plugin indent on
