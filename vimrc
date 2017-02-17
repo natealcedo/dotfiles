@@ -35,8 +35,7 @@ let g:airline_powerline_fonts = 1
 
 "-----------------------------------Basic Indenting------------------------
 let g:indentLine_char = '|'
-let delimitMate_expand_cr=1
-
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 "------------------------------------Theme---------------------------------
 syntax enable
 let base16colorspace=256 
@@ -44,12 +43,9 @@ colorscheme base16-default-dark
 "-----------------------------------Basic Settings------------------------
 
 filetype plugin indent on
-set tabstop=4
-set shiftwidth=4
-set expandtab
 set number
 set relativenumber
-
+"
 "--------------------------------KeyMappings--------------------------------
 :inoremap jj <esc>
 
