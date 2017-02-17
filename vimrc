@@ -1,3 +1,6 @@
+set nocompatible              
+filetype off                 
+set rtp+=~/.vim/
 "---------------------------Vim Plug------------------------------------
 call plug#begin('~/.vim/plugged')
 
@@ -18,19 +21,16 @@ Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
+Plug 'SirVer/ultisnips'
 
 call plug#end()
 
-"-------------------------------FuzzyFileFinder--------------------
-set runtimepath^=~/.vim/plugged/ctrlp.vim
 
 "--------------------------------emmet-vim--------------------------
 let g:user_emmet_leader_key='<C-E>'
 
 "----------------------------------Airline for vim----------------------
 set laststatus=2
-set nocompatible              
-filetype off                 
 let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 
@@ -85,3 +85,12 @@ autocmd CompleteDone * pclose
 
 "---------------------------------disable swapfile-------------------------
 set noswapfile
+
+"---------------------------------------Ulti snips---------------------
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+let g:UltiSnipsSnippetsDir        = $HOME.'/.vim/UltiSnips/'
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+
+
