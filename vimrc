@@ -55,7 +55,8 @@ set relativenumber
 :inoremap jj <esc>
 let mapleader = ","
 map <C-k> mzgg=G`z
-
+:nmap <c-s> :w<CR>
+:imap <c-s> <Esc>:w<CR>a
 
 "----------------------------------Linting----------------------------------
 set statusline+=%#warningmsg#
