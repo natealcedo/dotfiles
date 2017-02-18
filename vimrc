@@ -24,6 +24,8 @@ Plug 'tpope/vim-surround'
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 Plug 'duggiefresh/vim-easydir'
+Plug 'mxw/vim-jsx'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -35,7 +37,6 @@ let g:user_emmet_leader_key='<C-E>'
 set laststatus=2
 let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
-
 "-----------------------------------Basic Indenting------------------------
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 let delimitMate_expand_cr=1
@@ -44,19 +45,20 @@ let g:indentLine_char = '|'
 "------------------------------------Theme---------------------------------
 syntax enable
 let base16colorspace=256 
-colorscheme base16-default-dark
+colorscheme base16-chalk
 "-----------------------------------Basic Settings------------------------
 
 filetype plugin indent on
 set number
 set relativenumber
-
+set path+=*
 "--------------------------------KeyMappings--------------------------------
 :inoremap jj <esc>
 let mapleader = ","
 map <C-k> mzgg=G`z
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
+map ; :
 
 "----------------------------------Linting----------------------------------
 set statusline+=%#warningmsg#
@@ -79,7 +81,7 @@ let g:syntastic_style_warning_symbol = '💩'
 let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-k>'
 let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
+let g:multi_cursor_quit_key='<C-h>'
 
 "----------------------------controlp------------------------------------
 set wildignore+=**/bower_components/*,**/node_modules/*,**/tmp/*,**/assets/images/*,**/assets/fonts/*,**/public/images/*
@@ -115,4 +117,5 @@ if has("autocmd")
     autocmd VimEnter * :call SetupCtrlP()
 endif
 
-
+"-----------------------------------Syntax--------------------------------------
+let g:jsx_ext_required = 0
