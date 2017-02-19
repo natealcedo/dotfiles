@@ -127,3 +127,4 @@ let g:jsx_ext_required = 0
 "-----------------------------------Fix my js---------------------------------
 let g:fixmyjs_engine = 'eslint'
 noremap <c-m> :Fixmyjs<CR>
+let g:fixmyjs_rc_path = '~/.eslintrc.json'
