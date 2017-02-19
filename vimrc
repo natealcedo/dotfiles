@@ -26,6 +26,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'duggiefresh/vim-easydir'
 Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-fugitive'
+Plug 'ruanyl/vim-fixmyjs'
 
 call plug#end()
 
@@ -119,3 +120,7 @@ endif
 
 "-----------------------------------Syntax--------------------------------------
 let g:jsx_ext_required = 0
+
+"-----------------------------------Fix my js---------------------------------
+let g:fixmyjs_engine = 'eslint'
+noremap <Leader><Leader>f :Fixmyjs<CR>
