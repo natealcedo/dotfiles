@@ -27,6 +27,7 @@ Plug 'duggiefresh/vim-easydir'
 Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-fugitive'
 Plug 'ruanyl/vim-fixmyjs'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -46,9 +47,10 @@ let g:indentLine_char = '|'
 "------------------------------------Theme---------------------------------
 syntax enable
 let base16colorspace=256 
-colorscheme base16-chalk
+colorscheme base16-default-dark
 "-----------------------------------Basic Settings------------------------
 
+let g:NERDTreeHijackNetrw=0
 filetype plugin indent on
 set number
 set relativenumber
@@ -56,10 +58,11 @@ set path+=*
 "--------------------------------KeyMappings--------------------------------
 :inoremap jj <esc>
 let mapleader = ","
-map <C-k> mzgg=G`z
+map <C-l> mzgg=G`z
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
 map ; :
+map <C-b> :NERDTreeToggle<CR>
 
 "----------------------------------Linting----------------------------------
 set statusline+=%#warningmsg#
@@ -123,4 +126,4 @@ let g:jsx_ext_required = 0
 
 "-----------------------------------Fix my js---------------------------------
 let g:fixmyjs_engine = 'eslint'
-noremap <Leader><Leader>f :Fixmyjs<CR>
+noremap <c-m> :Fixmyjs<CR>
