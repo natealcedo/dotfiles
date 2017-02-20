@@ -1,3 +1,5 @@
 [user]
 	email = nathanielalcedojr@gmail.com
 	name = Nathaniel D Alcedo Jr
+[core]
+	editor = vim
