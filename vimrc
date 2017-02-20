@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'jelera/vim-javascript-syntax'
 Plug 'Raimondi/delimitMate'
-Plug 'pangloss/vim-javascript'
 Plug 'kien/ctrlp.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'vim-syntastic/syntastic'
