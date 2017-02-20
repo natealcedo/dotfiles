@@ -126,3 +126,4 @@ bind -r '\C-s'
 stty -ixon
 alias vim='vim.nox-py2'
 alias v='vim.nox-py2'
+alias t='tree  -I node_modules'
