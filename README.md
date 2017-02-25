@@ -17,6 +17,8 @@ jI'll probably update this in the future if I have to work with another language
 1. Download base-16 shell scripts
 2. Follow instructions on the documentation to install and ensure that terminal supports the correct colours.
 
-### Use vim.nox-py2 instead of normal vim so that ulti snips does not conflict with You complete me 
+## Things to Note
+1. Use vim.nox-py2 instead of normal vim so that ulti snips does not conflict with You complete me 
+2. Use the adobe source pro font instsalled from the fonts for vim-powerline/airline. Gives abit of margin between lines. It helps to make reading code from line to line easier.
 
 #Enjoy!
