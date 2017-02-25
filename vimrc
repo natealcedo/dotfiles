@@ -26,6 +26,8 @@ Plug 'mxw/vim-jsx'
 Plug 'tpope/vim-fugitive'
 Plug 'ruanyl/vim-fixmyjs'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'christoomey/vim-sort-motion'
 
 call plug#end()
 
