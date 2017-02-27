@@ -28,19 +28,21 @@ Plug 'ruanyl/vim-fixmyjs'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'christoomey/vim-sort-motion'
+Plug 'alvan/vim-closetag'
 
 call plug#end()
 
 
 "--------------------------------emmet-vim--------------------------
 let g:user_emmet_leader_key='<C-E>'
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js"
 
 "----------------------------------Airline for vim----------------------
 set laststatus=2
 let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 "-----------------------------------Basic Indenting------------------------
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 let delimitMate_expand_cr=1
 let g:indentLine_char = '|'
 
