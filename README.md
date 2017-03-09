@@ -10,7 +10,7 @@ I'll probably update this in the future if I have to work with another language.
 3. Run npm install on tern for vim (this is for autocompletion)
 4. Ensure that python dependencies are installd as well (https://github.com/Valloric/YouCompleteMe/) (Basically just follow the instructions from the documentation.)
 5. Install eslint globally along with 'npm i -g estraverse estraverse-fb eslint-plugin-react babel-eslint' for syntax linting capabilities (This is for syntax linting)
-6. Install Powerline Fonts for vim 'http://sourcedigit.com/17395-install-powerline-vim-editor-plugin-on-ubuntu-15-04-ubuntu-14-04/'
+6. Install Powerline Fonts for vim 'https://github.com/powerline/fonts'
 
 
 ## Make bash look good with base16-shell
