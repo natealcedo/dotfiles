@@ -3,3 +3,5 @@
 	name = Nathaniel D Alcedo Jr
 [core]
 	editor = vim
+[push]
+	default = matching
