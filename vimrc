@@ -16,7 +16,6 @@ Plug 'danro/rename.vim'
 Plug 'duggiefresh/vim-easydir'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'kien/ctrlp.vim'
-Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'
 Plug 'ruanyl/vim-fixmyjs'
 Plug 'scrooloose/nerdtree'
@@ -33,11 +32,6 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'digitaltoad/vim-pug'
 
 call plug#end()
-
-
-"--------------------------------emmet-vim--------------------------
-let g:user_emmet_leader_key='<C-E>'
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js"
 
 "----------------------------------Airline for vim----------------------
 set laststatus=2
