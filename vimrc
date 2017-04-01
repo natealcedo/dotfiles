@@ -121,6 +121,7 @@ endif
 
 "-----------------------------------Syntax--------------------------------------
 let g:jsx_ext_required = 0
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js"
 
 "-----------------------------------Fixmyjs----------------------------
 let g:fixmyjs_engine = 'eslint'
