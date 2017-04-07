@@ -101,20 +101,29 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 "-------------------------------------Create/open file in curren folder
 map <Leader>ee :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
 
+"--------------------------Create folders on file save
+augroup Mkdir
+  autocmd!
+  autocmd BufWritePre *
+    \ if !isdirectory(expand("<afile>:p:h")) |
+        \ call mkdir(expand("<afile>:p:h"), "p") |
+    \ endif
+augroup END
+
 "-------------------Custom Script---------------------
 " CtrlP auto cache clearing.
 " ----------------------------------------------------------------------------
 function! SetupCtrlP()
-    if exists("g:loaded_ctrlp") && g:loaded_ctrlp
-        augroup CtrlPExtension
-            autocmd!
-            autocmd FocusGained  * CtrlPClearCache
-            autocmd BufWritePost * CtrlPClearCache
-        augroup END
-    endif
+  if exists("g:loaded_ctrlp") && g:loaded_ctrlp
+    augroup CtrlPExtension
+      autocmd!
+      autocmd FocusGained  * CtrlPClearCache
+      autocmd BufWritePost * CtrlPClearCache
+    augroup END
+  endif
 endfunction
 if has("autocmd")
-    autocmd VimEnter * :call SetupCtrlP()
+  autocmd VimEnter * :call SetupCtrlP()
 endif
 
 "-----------------------------------Syntax--------------------------------------
