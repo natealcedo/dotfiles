@@ -5,17 +5,14 @@ set rtp+=~/.vim/plugged
 "---------------------------Vim Plug------------------------------------
 call plug#begin('~/.vim/plugged')
 
-Plug 'Raimondi/delimitMate'
-Plug 'SirVer/ultisnips'
-Plug 'Valloric/YouCompleteMe'
-Plug 'Yggdroot/indentLine'
 Plug 'alvan/vim-closetag'
+Plug 'cakebaker/scss-syntax.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'danro/rename.vim'
 Plug 'kien/ctrlp.vim'
-Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 Plug 'ruanyl/vim-fixmyjs'
 Plug 'scrooloose/nerdtree'
 Plug 'ternjs/tern_for_vim'
@@ -26,8 +23,10 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'digitaltoad/vim-pug'
+Plug 'Raimondi/delimitMate'
+Plug 'SirVer/ultisnips'
+Plug 'Valloric/YouCompleteMe'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
