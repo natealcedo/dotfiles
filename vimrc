@@ -104,9 +104,9 @@ map <Leader>ee :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
 augroup Mkdir
   autocmd!
   autocmd BufWritePre *
-    \ if !isdirectory(expand("<afile>:p:h")) |
+        \ if !isdirectory(expand("<afile>:p:h")) |
         \ call mkdir(expand("<afile>:p:h"), "p") |
-    \ endif
+        \ endif
 augroup END
 
 "-------------------Custom Script---------------------
@@ -121,8 +121,10 @@ function! SetupCtrlP()
     augroup END
   endif
 endfunction
+
 if has("autocmd")
   autocmd VimEnter * :call SetupCtrlP()
+  autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 endif
 
 "-----------------------------------Syntax--------------------------------------
@@ -132,3 +134,13 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js"
 "-----------------------------------Fixmyjs----------------------------
 let g:fixmyjs_engine = 'eslint'
 noremap <c-m> :Fixmyjs<CR>
+
+" Remove whitespaces on save saving cursor position
+" =================================================
+
+function! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
