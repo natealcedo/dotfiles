@@ -1,6 +1,6 @@
-"----------------------------Setup for vim -------------------------------
-set nocompatible              
-filetype off                 
+"----------------------------Setup for vm -------------------------------
+set nocompatible
+filetype off
 set rtp+=~/.vim/plugged
 "---------------------------Vim Plug------------------------------------
 call plug#begin('~/.vim/plugged')
@@ -41,7 +41,7 @@ let g:indentLine_char = '|'
 
 "------------------------------------Theme---------------------------------
 syntax enable
-let base16colorspace=256 
+let base16colorspace=256
 colorscheme base16-default-dark
 "-----------------------------------Basic Settings------------------------
 
@@ -133,7 +133,7 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js"
 
 "-----------------------------------Fixmyjs----------------------------
 let g:fixmyjs_engine = 'eslint'
-noremap <c-m> :Fixmyjs<CR>
+noremap <Leader><Leader>f :Fixmyjs<CR>
 
 " Remove whitespaces on save saving cursor position
 " =================================================
