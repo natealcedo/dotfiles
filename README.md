@@ -9,7 +9,7 @@ I'll probably update this in the future if I have to work with another language.
 2. Run PlugInstall in Vim
 3. Run npm install on tern for vim (this is for autocompletion)
 4. Ensure that python dependencies are installd as well (https://github.com/Valloric/YouCompleteMe/) (Basically just follow the instructions from the documentation)
-5. Install eslint and babel-eslint(this is for async await) globally
+5. Install eslint, eslint-plugin-react babel-eslint(this is for async await) globally
 6. Install Powerline Fonts for vim 'https://github.com/powerline/fonts'
 7. When starting a new project, make an eslintrc file and either soft link the eslintrc file to its json counterpart or just rename the json file to eslintrc
 
