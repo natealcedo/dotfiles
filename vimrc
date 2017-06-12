@@ -27,6 +27,8 @@ Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
 Plug 'Yggdroot/indentLine'
+Plug 'posva/vim-vue'
+Plug 'JamshedVesuna/vim-markdown-preview'
 
 call plug#end()
 
@@ -58,6 +60,8 @@ map <C-l> mzgg=G`z
 :imap <c-s> <Esc>:w<CR>a
 map ; :
 map <C-b> :NERDTreeToggle<CR>
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_github=1
 
 "----------------------------------Linting----------------------------------
 set statusline+=%#warningmsg#
