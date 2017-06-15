@@ -5,6 +5,7 @@ set rtp+=~/.vim/plugged
 "---------------------------Vim Plug------------------------------------
 call plug#begin('~/.vim/plugged')
 
+Plug 'heavenshell/vim-jsdoc'
 Plug 'alvan/vim-closetag'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'chriskempson/base16-vim'
@@ -112,6 +113,10 @@ augroup Mkdir
         \ call mkdir(expand("<afile>:p:h"), "p") |
         \ endif
 augroup END
+
+"----------------------JSDocs----------------------
+nmap <silent> <C-i> <Plug>(jsdoc)
+let g:jsdoc_allow_input_prompt = 1
 
 "-------------------Custom Script---------------------
 " CtrlP auto cache clearing.
