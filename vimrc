@@ -5,6 +5,8 @@ set rtp+=~/.vim/plugged
 "---------------------------Vim Plug------------------------------------
 call plug#begin('~/.vim/plugged')
 
+Plug 'ervandew/supertab'
+Plug 'davidhalter/jedi-vim'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'alvan/vim-closetag'
 Plug 'cakebaker/scss-syntax.vim'
@@ -25,8 +27,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
 Plug 'Raimondi/delimitMate'
-Plug 'SirVer/ultisnips'
-Plug 'Valloric/YouCompleteMe'
 Plug 'Yggdroot/indentLine'
 Plug 'posva/vim-vue'
 Plug 'JamshedVesuna/vim-markdown-preview'
