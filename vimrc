@@ -32,6 +32,7 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'Yggdroot/indentLine'
 Plug 'posva/vim-vue'
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'heavenshell/vim-pydocstring'
 
 call plug#end()
 
