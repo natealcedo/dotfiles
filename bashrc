@@ -134,6 +134,6 @@ export TERM=xterm-256color
 
 bind -r '\C-s'
 stty -ixon
-alias vim='vim.nox-py2'
-alias v='vim.nox-py2'
+alias vim='vim'
+alias v='vim'
 alias t='tree -I node_modules'
