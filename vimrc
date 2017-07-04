@@ -5,8 +5,8 @@ set rtp+=~/.vim/plugged
 "---------------------------Vim Plug------------------------------------
 call plug#begin('~/.vim/plugged')
 
-Plug 'lambdalisue/vim-pyenv'
 Plug 'davidhalter/jedi-vim'
+Plug 'lambdalisue/vim-pyenv'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'alvan/vim-closetag'
 Plug 'cakebaker/scss-syntax.vim'
@@ -128,6 +128,13 @@ augroup END
 "----------------------JSDocs----------------------
 nmap <silent> <C-i> <Plug>(jsdoc)
 let g:jsdoc_allow_input_prompt = 1
+"---------------------vimpydoc--------------------------
+nmap <silent> <C-k> <Plug>(pydocstring)
+"-----------python---------------------------
+let g:jedi#show_call_signatures = "0"
+let g:jedi#show_call_signatures_delay = 0
+let g:jedi#popup_on_dot = 0
+let g:jedi#completions_command = "<C->"
 
 "-------------------Custom Script---------------------
 " CtrlP auto cache clearing.
