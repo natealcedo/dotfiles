@@ -40,7 +40,24 @@ set laststatus=2
 let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 "-----------------------------------Basic Indenting------------------------
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+" Javascript
+au BufNewFile,BufRead *.js, *.html, *.css
+      \ set tabstop=2
+      \ set softtabstop=0
+      \ set expandtab
+      \ set shiftwidth=2
+      \ set smarttab
+
+"Python
+au BufNewFile,BufRead *.py
+      \ set tabstop=4
+      \ set softtabstop=4
+      \ set shiftwidth=4
+      \ set textwidth=79
+      \ set expandtab
+      \ set autoindent
+      \ set fileformat=unix
+
 let delimitMate_expand_cr=1
 let g:indentLine_char = '|'
 set backspace=2 " make backspace work like most other apps
@@ -79,6 +96,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_pylint_args = '--rcfile=/home/nate/.pylintrc'
 
 let g:syntastic_error_symbol = '❌'
 let g:syntastic_style_error_symbol = '⁉️'
