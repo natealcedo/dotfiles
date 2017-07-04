@@ -41,6 +41,7 @@ let g:airline_powerline_fonts = 1
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 let delimitMate_expand_cr=1
 let g:indentLine_char = '|'
+set backspace=2 " make backspace work like most other apps
 
 "------------------------------------Theme---------------------------------
 syntax enable
