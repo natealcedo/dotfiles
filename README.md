@@ -20,7 +20,7 @@ I'll probably update this in the future if I have to work with another language.
 3. Use base16_default-dark for a theme thats easy on the eyes
 
 ## Things to Note
-1. Use vim.nox-py2 instead of normal vim so that ulti snips does not conflict with YouCompleteMe
+1. Compile vim from source with both python dependencies as per documentation from YouCompleteMe page.
 2. Use the adobe source pro font instsalled from the fonts for vim-powerline/airline. Gives abit of margin between lines. It helps to make reading code from line to line easier
 
 #Enjoy!
