@@ -134,6 +134,7 @@ export TERM=xterm-256color
 
 bind -r '\C-s'
 stty -ixon
-alias vim='vim'
-alias v='vim'
+alias vim='/usr/bin/vim'
+alias vi='/usr/bin/vim'
+alias v='/usr/bin/vim'
 alias t='tree -I node_modules'
