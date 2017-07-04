@@ -41,22 +41,10 @@ let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 "-----------------------------------Basic Indenting------------------------
 " Javascript
-au BufNewFile,BufRead *.js, *.html, *.css
-      \ set tabstop=2
-      \ set softtabstop=0
-      \ set expandtab
-      \ set shiftwidth=2
-      \ set smarttab
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 "Python
-au BufNewFile,BufRead *.py
-      \ set tabstop=4
-      \ set softtabstop=4
-      \ set shiftwidth=4
-      \ set textwidth=79
-      \ set expandtab
-      \ set autoindent
-      \ set fileformat=unix
+au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 
 let delimitMate_expand_cr=1
 let g:indentLine_char = '|'
