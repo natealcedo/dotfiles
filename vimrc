@@ -5,6 +5,8 @@ set rtp+=~/.vim/plugged
 "---------------------------Vim Plug------------------------------------
 call plug#begin('~/.vim/plugged')
 
+Plug 'lambdalisue/vim-pyenv'
+Plug 'davidhalter/jedi-vim'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'alvan/vim-closetag'
 Plug 'cakebaker/scss-syntax.vim'
