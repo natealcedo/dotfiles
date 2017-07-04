@@ -134,7 +134,7 @@ nmap <silent> <C-k> <Plug>(pydocstring)
 let g:jedi#show_call_signatures = "0"
 let g:jedi#show_call_signatures_delay = 0
 let g:jedi#popup_on_dot = 0
-let g:jedi#completions_command = "<C->"
+let g:jedi#completions_command = "<C-j>"
 
 "-------------------Custom Script---------------------
 " CtrlP auto cache clearing.
