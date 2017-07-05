@@ -23,4 +23,8 @@ I'll probably update this in the future if I have to work with another language.
 1. Compile vim from source with both python dependencies as per documentation from YouCompleteMe page.
 2. Use the adobe source pro font instsalled from the fonts for vim-powerline/airline. Gives abit of margin between lines. It helps to make reading code from line to line easier
 
+## Compiling vim
+1. Compile as per YouCompleteMe docs.
+2. Only link 2.7.13 library from pyenv/version/2.7.13/config during compile BUT python 3 as per normal.
+
 #Enjoy!
