@@ -2,6 +2,11 @@
 
 I'll probably update this in the future if I have to work with another language. This is sufficient enough a setup to replace vscode. This setup has linting and autocomplete enabled.
 
+## Compiling vim and making it work with pyvim
+1. Install pyenv first and get those dependencies up.
+2. Compile as per YouCompleteMe docs.
+3. However under the configure call, link python-config-dir to /pyenv/versions/:versionNumber/lib/:pythonVersion/config
+
 ## Steps to make this work for javascript
 
 1. Git clone
@@ -13,7 +18,6 @@ I'll probably update this in the future if I have to work with another language.
 6. Install Powerline Fonts for vim 'https://github.com/powerline/fonts'
 7. When starting a new project, make an eslintrc file and either soft link the eslintrc file to its json counterpart or just rename the json file to eslintrc
 
-
 ## Make bash look good with base16-shell
 1. Download base-16 shell scripts
 2. Follow instructions on the documentation to install and ensure that terminal supports 256 colors
@@ -23,8 +27,7 @@ I'll probably update this in the future if I have to work with another language.
 1. Compile vim from source with both python dependencies as per documentation from YouCompleteMe page.
 2. Use the adobe source pro font instsalled from the fonts for vim-powerline/airline. Gives abit of margin between lines. It helps to make reading code from line to line easier
 
-## Compiling vim
-1. Compile as per YouCompleteMe docs.
-2. Only link 2.7.13 library from pyenv/version/2.7.13/config during compile BUT python 3 as per normal.
+
+
 
 #Enjoy!
