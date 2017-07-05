@@ -135,6 +135,7 @@ let g:jedi#show_call_signatures = "1"
 let g:jedi#show_call_signatures_delay = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#completions_command = "<C-j>"
+autocmd FileType python setlocal completeopt-=preview
 
 "-------------------Custom Script---------------------
 " CtrlP auto cache clearing.
