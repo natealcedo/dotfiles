@@ -1,22 +1,43 @@
-# These are my dotfiles which currently is set up for developing javascript with vim.
+# This vimrc set up works for both Python and Javascript at the moment.
 
-I'll probably update this in the future if I have to work with another language. This is sufficient enough a setup to replace vscode. This setup has linting and autocomplete enabled.
+## NOTE:
+Do not use a default vim package from apt if you plan on working with python. They will break with pyenv.
+Instead, compile your own version from source. This has the benefit of having clipboard installed as well
+since the package from apt does not. Another benefit is that vim 8 is installed.
 
-## Compiling vim and making it work with pyvim
+## Compiling vim and making it work with pyenv
 1. Install pyenv first and get those dependencies up.
-2. Compile as per YouCompleteMe docs.
-3. However under the configure call, link python-config-dir to /pyenv/versions/:versionNumber/lib/:pythonVersion/config
+2. Download vim from [github](https://github.com/vim/vim)
+3. Compile as per the YouCompleteMe [documentation](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source).
+4. However under the configure call, link python-config-dir to home/nate/opt/pyenv/versions/:versionNumber/lib/:pythonVersion/config (this is so pyenv wont break vim)
 
-## Steps to make this work for javascript
+```
+cd ~
+git clone https://github.com/vim/vim.git
+cd vim
+./configure --with-features=huge \
+            --enable-multibyte \
+            --enable-rubyinterp=yes \
+            --enable-pythoninterp=yes \
+            --with-python-config-dir=home/nate/opt/pyenv/versions/:versionNumber/lib/:pythonVersion/config
+            --enable-python3interp=yes \
+            --with-python3-config-dir=/usr/lib/python3.5/config \
+            --enable-perlinterp=yes \
+            --enable-luainterp=yes \
+            --enable-gui=gtk2 --enable-cscope --prefix=/usr
+make VIMRUNTIMEDIR=/usr/share/vim/vim80
+```
+
+## Instrcutions on how to get this up and running
 
 1. Git clone
 2. Run install.sh
-2. Run PlugInstall in Vim
-3. Run npm install on tern for vim (this is for autocompletion)
-4. Ensure that python dependencies are installd as well (https://github.com/Valloric/YouCompleteMe/) (Basically just follow the instructions from the documentation)
-5. Install eslint, eslint-plugin-react babel-eslint(this is for async await) globally
-6. Install Powerline Fonts for vim 'https://github.com/powerline/fonts'
-7. When starting a new project, make an eslintrc file and either soft link the eslintrc file to its json counterpart or just rename the json file to eslintrc
+3. Run PlugInstall in Vim
+4. Run Install.py with the right arguments in YouCompleteMe for autocompletion
+5. Run npm install on tern for vim (this is for autocompletion)
+6. Install eslint, eslint-plugin-react babel-eslint(this is for async await) globally
+7. Install Powerline Fonts for vim 'https://github.com/powerline/fonts'
+8. When starting a new project, make an eslintrc file and either soft link the eslintrc file to its json counterpart or just rename the json file to eslintrc
 
 ## Make bash look good with base16-shell
 1. Download base-16 shell scripts
@@ -24,10 +45,6 @@ I'll probably update this in the future if I have to work with another language.
 3. Use base16_default-dark for a theme thats easy on the eyes
 
 ## Things to Note
-1. Compile vim from source with both python dependencies as per documentation from YouCompleteMe page.
-2. Use the adobe source pro font instsalled from the fonts for vim-powerline/airline. Gives abit of margin between lines. It helps to make reading code from line to line easier
-
-
-
+1. Use the adobe source pro font instsalled from the fonts for vim-powerline/airline. Gives abit of margin between lines. It helps to make reading code from line to line easier
 
 #Enjoy!
