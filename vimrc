@@ -48,7 +48,7 @@ let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 "-----------------------------------Basic Indenting------------------------
 " Javascript
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab
 
 "Python
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
