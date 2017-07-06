@@ -2,6 +2,12 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/plugged
+
+" copy and paste
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
 "---------------------------Vim Plug------------------------------------
 call plug#begin('~/.vim/plugged')
 
