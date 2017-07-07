@@ -77,6 +77,7 @@ let mapleader = ","
 map <C-l> mzgg=G`z
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
+map <leader>c :TernDef<CR>
 map ; :
 map <C-b> :NERDTreeToggle<CR>
 let vim_markdown_preview_hotkey='<C-m>'
