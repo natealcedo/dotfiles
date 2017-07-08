@@ -11,6 +11,7 @@ imap <C-v> <ESC>"+pa
 "---------------------------Vim Plug------------------------------------
 call plug#begin('~/.vim/plugged')
 
+Plug 'edkolev/tmuxline.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'lambdalisue/vim-pyenv'
 Plug 'heavenshell/vim-jsdoc'
@@ -82,6 +83,12 @@ map ; :
 map <C-b> :NERDTreeToggle<CR>
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_github=1
+
+" Switching panels
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 "----------------------------------Linting----------------------------------
 set statusline+=%#warningmsg#
