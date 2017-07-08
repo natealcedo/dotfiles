@@ -24,11 +24,15 @@ echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in $files; do
+  echo $file
   echo "Moving any existing dotfiles from ~ to $olddir"
   mv ~/.$file $olddir
   echo "Creating symlink to $file in home directory."
   ln -s $dir/$file ~/.$file
 done
+
+echo "Deleting old directory"
+rm -rf $olddir
 
 echo "Making UltiSnips Directory"
 cd $dir/vim/plugged/ && mkdir UltiSnips
