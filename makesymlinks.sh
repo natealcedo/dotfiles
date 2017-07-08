@@ -34,4 +34,5 @@ echo "Making UltiSnips Directory"
 cd $dir/vim/plugged/ && mkdir UltiSnips
 echo "Transferring Snippets"
 cp  $dir/javascript.snippets $dir/vim/plugged/UltiSnips/
+cp  $dir/python.snippets $dir/vim/plugged/UltiSnips/
 echo "Done"

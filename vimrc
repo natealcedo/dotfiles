@@ -122,6 +122,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsSnippetsDir        = $HOME.'/.vim/plugged/UltiSnips'
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+let g:UltiSnipsUsePythonVersion = 2
 
 "-------------------------------------Create/open file in curren folder
 map <Leader>ee :e <C-R>=escape(expand("%:p:h"),' ') . '/'<CR>
