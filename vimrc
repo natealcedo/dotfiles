@@ -78,7 +78,6 @@ let mapleader = ","
 map <C-l> mzgg=G`z
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
-map <leader>c :TernDef<CR>
 map ; :
 map <C-b> :NERDTreeToggle<CR>
 let vim_markdown_preview_hotkey='<C-m>'
@@ -119,6 +118,11 @@ let g:multi_cursor_quit_key='<C-h>'
 set wildignore+=**/bower_components/*,**/node_modules/*,**/tmp/*,**/assets/images/*,**/assets/fonts/*,**/public/images/*
 "--------------------------------ternjs---------------------------------
 autocmd CompleteDone * pclose
+
+"----------------------------Vim Fugititve-------------------------------
+map <leader>s :Gstatus<CR>
+map <leader>f :Gdiff<CR>
+map <leader>c :Gcommit<CR>
 
 "---------------------------------disable swapfile-------------------------
 set noswapfile
