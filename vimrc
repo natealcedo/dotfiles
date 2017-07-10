@@ -83,12 +83,6 @@ map <C-b> :NERDTreeToggle<CR>
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_github=1
 
-" Switching panels
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
 "----------------------------------Linting----------------------------------
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
