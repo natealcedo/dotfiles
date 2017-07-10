@@ -79,9 +79,9 @@ map <C-l> mzgg=G`z
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
 map ; :
-map <C-b> :NERDTreeToggle<CR>
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_github=1
+map <C-g> :NERDTreeToggle<CR>
 
 "----------------------------------Linting----------------------------------
 set statusline+=%#warningmsg#
