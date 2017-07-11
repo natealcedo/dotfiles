@@ -30,14 +30,15 @@ make VIMRUNTIMEDIR=/usr/share/vim/vim80
 
 ## Instrcutions on how to get this up and running
 
-1. Git clone
-2. Run install.sh
-3. Run PlugInstall in Vim
-4. Run Install.py with the right arguments in YouCompleteMe for autocompletion
-5. Run npm install on tern for vim (this is for autocompletion)
-6. Install eslint, eslint-plugin-react babel-eslint(this is for async await) globally
-7. Install Powerline Fonts for vim 'https://github.com/powerline/fonts'
-8. When starting a new project, make an eslintrc file and either soft link the eslintrc file to its json counterpart or just rename the json file to eslintrc
+1. Install pyenv first
+2. Git clone
+3. Run install.sh
+4. Run PlugInstall in Vim
+5. Run Install.py with the right arguments in YouCompleteMe for autocompletion
+6. Run npm install on tern for vim (this is for autocompletion)
+7. Install eslint, eslint-plugin-react babel-eslint(this is for async await) globally
+8. Install Powerline Fonts for vim 'https://github.com/powerline/fonts'
+9. When starting a new project, make an eslintrc file and either soft link the eslintrc file to its json counterpart or just rename the json file to eslintrc
 
 ## Make bash look good with base16-shell
 1. Download base-16 shell scripts
