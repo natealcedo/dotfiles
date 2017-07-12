@@ -146,6 +146,7 @@ let g:jsdoc_allow_input_prompt = 1
 "---------------------vimpydoc--------------------------
 nmap <silent> <C-k> <Plug>(pydocstring)
 "-----------python---------------------------
+let g:jedi#completions_enabled = 0
 let g:jedi#show_call_signatures = "1"
 let g:jedi#show_call_signatures_delay = 0
 let g:jedi#popup_on_dot = 0
