@@ -23,7 +23,6 @@ Plug 'danro/rename.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
-Plug 'ruanyl/vim-fixmyjs'
 Plug 'scrooloose/nerdtree'
 Plug 'ternjs/tern_for_vim'
 Plug 'terryma/vim-multiple-cursors'
@@ -174,10 +173,6 @@ endif
 "-----------------------------------Syntax--------------------------------------
 let g:jsx_ext_required = 0
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js"
-
-"-----------------------------------Fixmyjs----------------------------
-let g:fixmyjs_engine = 'eslint'
-noremap <Leader><Leader>f :Fixmyjs<CR>
 
 "---------------------Prettier-------------------------------------
 " max line lengh that prettier will wrap on
