@@ -48,4 +48,8 @@ make VIMRUNTIMEDIR=/usr/share/vim/vim80
 ## Things to Note
 1. Use the adobe source pro font instsalled from the fonts for vim-powerline/airline. Gives abit of margin between lines. It helps to make reading code from line to line easier
 
+## Side things to do with ubuntu 16.04 and dell xps 13 9360
+1. If bluetooth doesnt work. Run this in the terminal as root.
+`echo "options ath10k_core skip_otp=y" > /etc/modprobe.d/ath10k.conf`
+
 #Enjoy!
