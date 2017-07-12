@@ -81,6 +81,7 @@ map ; :
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_github=1
 map <C-g> :NERDTreeToggle<CR>
+nmap <F7> :! clear && python %<CR>
 
 "----------------------------------Linting----------------------------------
 set statusline+=%#warningmsg#
