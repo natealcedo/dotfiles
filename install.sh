@@ -35,9 +35,9 @@ echo "====================================="
 echo "Installing Imagemick (ver 7,*)"
 echo "====================================="
 cd ~/Downloads/; curl -LO https://www.imagemagick.org/download/ImageMagick.tar.gz
-tar xvfz ImageMagick.tar.gz; cd ImageMagick-7.0.6-0
-./configure --prefix=/home/$USER/opt/ImageMagick-7.0.6-0; make install
-ln -s ImageMagick-7.0.6-0 imagemagick
+tar xvfz ImageMagick.tar.gz -C ImageMagick --strip-components=1 && cd ImageMagick
+./configure --prefix=/home/$USER/opt/ImageMagick; make install
+ln -s ImageMagick imagemagick
 
 echo "Installing ver( 2.*)"
 echo "====================================="
