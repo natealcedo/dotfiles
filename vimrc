@@ -81,6 +81,12 @@ map ; :
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_github=1
 map <C-g> :NERDTreeToggle<CR>
+
+" Python keys
+map <leader><leader>d :call jedi#goto_definitions()<CR>
+map <leader><leader>g :call jedi#goto_assignments()<CR>
+map <leader><leader>r :call jedi#rename()<CR>
+map <leader><leader>n :call jedi#usages()<CR>
 nmap <F7> :! clear && python %<CR>
 
 "----------------------------------Linting----------------------------------
