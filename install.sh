@@ -1,13 +1,12 @@
 #!/bin/bash
 
 USER=`whoami`
-# echo "Creating ~/opt directory..."
-# cd ~ && mkdir opt
-# echo "Installing essential libraries"
-# echo "====================================="
+echo "Creating ~/opt directory..."
+cd ~ && mkdir opt
+echo "Installing essential libraries"
+echo "====================================="
 
 sudo apt install build-essential cmake pkg-config curl git mercurial iotop libreadline-dev libbz2-dev libncurses5-dev libssl-dev libgdbm-dev libc6-dev libsqlite3-dev tk-dev dpkg-dev texinfo automake libtool cmake libgeos-dev  libjpeg-dev libfreetype6 libfreetype6-dev zlib1g-dev gfortran libopenblas-dev liblapack-dev libevent-dev libpq-dev libxml2-dev libxslt1-dev libffi-dev libcurl4-openssl-dev libbz2-1.0 libbz2-dev libbz2-ocaml libbz2-ocaml-dev libgs-dev ghostscript libjpeg-dev libtiff5-dev libpng12-dev zlib1g-dev libtiff5 libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk-3-dev libatlas-base-dev gfortran
-sudo apt install libcurl4-gnutls-dev
 
 echo "Installing pyenv"
 echo "====================================="
