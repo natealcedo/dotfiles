@@ -2,7 +2,7 @@
 	email = ndaljr@gmail.com
 	name = Nathaniel D Alcedo Jr
 [core]
-	editor = vim -u ~/dotfiles/gitvim
+	editor = vim -u ~/.gitvim
 [push]
 	default = matching
 [alias]
