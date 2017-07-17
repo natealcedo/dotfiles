@@ -6,24 +6,25 @@ USER=`whoami`
 # echo "Installing essential libraries"
 # echo "====================================="
 
-# sudo apt install build-essential cmake pkg-config curl git mercurial iotop libreadline-dev libbz2-dev libncurses5-dev libssl-dev libgdbm-dev libc6-dev libsqlite3-dev tk-dev dpkg-dev texinfo automake libtool cmake libgeos-dev libcurl4-gnutls-dev libjpeg-dev libfreetype6 libfreetype6-dev zlib1g-dev gfortran libopenblas-dev liblapack-dev libevent-dev libpq-dev libxml2-dev libxslt1-dev libffi-dev libcurl4-openssl-dev libbz2-1.0 libbz2-dev libbz2-ocaml libbz2-ocaml-dev libgs-dev ghostscript libjpeg-dev libtiff5-dev libpng12-dev zlib1g-dev libtiff5 libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk-3-dev libatlas-base-dev gfortran
+sudo apt install build-essential cmake pkg-config curl git mercurial iotop libreadline-dev libbz2-dev libncurses5-dev libssl-dev libgdbm-dev libc6-dev libsqlite3-dev tk-dev dpkg-dev texinfo automake libtool cmake libgeos-dev  libjpeg-dev libfreetype6 libfreetype6-dev zlib1g-dev gfortran libopenblas-dev liblapack-dev libevent-dev libpq-dev libxml2-dev libxslt1-dev libffi-dev libcurl4-openssl-dev libbz2-1.0 libbz2-dev libbz2-ocaml libbz2-ocaml-dev libgs-dev ghostscript libjpeg-dev libtiff5-dev libpng12-dev zlib1g-dev libtiff5 libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk-3-dev libatlas-base-dev gfortran
+sudo apt install libcurl4-gnutls-dev
 
-# echo "Installing pyenv"
-# echo "====================================="
-# cd ~/opt && git clone git://github.com/yyuu/pyenv.git
-# echo "Install python 2.7.13"
-# export PYENV_ROOT=/home/$USER/opt/pyenv && export PATH=$PYENV_ROOT/bin:$PATH && eval "$(pyenv init -)" && export CONFIGURE_OPTS="--enable-shared" && export LD_LIBRARY_PATH=$PYENV_ROOT/versions/2.7.13/lib:$LD_LIBRARY_PATH && pyenv install 2.7.13
+echo "Installing pyenv"
+echo "====================================="
+cd ~/opt && git clone git://github.com/yyuu/pyenv.git
+echo "Install python 2.7.13"
+export PYENV_ROOT=/home/$USER/opt/pyenv && export PATH=$PYENV_ROOT/bin:$PATH && eval "$(pyenv init -)" && export CONFIGURE_OPTS="--enable-shared" && export LD_LIBRARY_PATH=$PYENV_ROOT/versions/2.7.13/lib:$LD_LIBRARY_PATH && pyenv install 2.7.13
 
-# echo "Adding pyenv variables into .profile"
-# echo "====================================="
-# echo "export PYENV_ROOT=/home/$USER/opt/pyenv" >> ~/.profile
-# echo 'export PATH=$PYENV_ROOT/bin:$PATH' >> ~/.profile
-# echo 'eval "$(pyenv init -)" ' >> ~/.profile
-# echo "echo \"Using python ...\"" >> ~/.profile
-# echo 'pyenv version' >> ~/.profile
-# echo "" >> ~/.profile
-# echo 'export LD_LIBRARY_PATH=/home/$USER/opt/pyenv/versions/2.7.13/lib:$LD_LIBRARY_PATH' >> ~/.profile
-# pyenv local 2.7.13
+echo "Adding pyenv variables into .profile"
+echo "====================================="
+echo "export PYENV_ROOT=/home/$USER/opt/pyenv" >> ~/.profile
+echo 'export PATH=$PYENV_ROOT/bin:$PATH' >> ~/.profile
+echo 'eval "$(pyenv init -)" ' >> ~/.profile
+echo "echo \"Using python ...\"" >> ~/.profile
+echo 'pyenv version' >> ~/.profile
+echo "" >> ~/.profile
+echo 'export LD_LIBRARY_PATH=/home/$USER/opt/pyenv/versions/2.7.13/lib:$LD_LIBRARY_PATH' >> ~/.profile
+pyenv local 2.7.13
 echo "Installing Python dependencies"
 echo "====================================="
 pip install --upgrade pip
