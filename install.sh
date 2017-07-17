@@ -69,9 +69,9 @@ pip install matplotlib
 
 echo "Configuring matplotlib"
 mkdir ~/.matplotlib;
-echo "backend : Qt4Agg" >> ~/.matplotlib/matplotlibrc
-echo "backend.qt4 : PySide" >> ~/.matplotlib/matplotlibrc
-echo "interactive  : True" >> ~/.matplotlib/matplotlibrc
+echo "\"backend     : Qt4Agg\"" >> ~/.matplotlib/matplotlibrc
+echo "\"backend.qt4 : PySide\"" >> ~/.matplotlib/matplotlibrc
+echo "\"interactive : True\"" >> ~/.matplotlib/matplotlibrc
 
 echo "====================================="
 echo "Installing PySide"
