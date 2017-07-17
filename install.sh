@@ -3,6 +3,8 @@
 USER=`whoami`
 echo "Creating ~/opt directory..."
 cd ~ && mkdir opt
+echo "Updating packages"
+sudo apt update
 echo "Installing essential libraries"
 echo "====================================="
 
