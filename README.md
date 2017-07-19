@@ -36,7 +36,7 @@ make VIMRUNTIMEDIR=/usr/share/vim/vim80
 4. Run PlugInstall in Vim
 5. Run Install.py with the right arguments in YouCompleteMe for autocompletion
 6. Run npm install on tern for vim (this is for autocompletion)
-7. Install pylint, eslint, eslint-plugin-react babel-eslint(this is for async await) globally
+7. Install pylint, eslint, eslint-plugin-import, eslint-plugin-react babel-eslint(this is for async await) globally
 8. Install Powerline Fonts for vim 'https://github.com/powerline/fonts'
 9. When starting a new project, make an eslintrc file and either soft link the eslintrc file to its json counterpart or just rename the json file to eslintrc
 
