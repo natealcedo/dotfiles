@@ -205,7 +205,7 @@ let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'true'
 
 " none|es5|all
-let g:prettier#config#trailing_comma = 'none'
+let g:prettier#config#trailing_comma = 'all'
 
 " flow|babylon|typescript|postcss|json|graphql
 let g:prettier#config#parser = 'flow'
