@@ -211,7 +211,7 @@ let g:prettier#config#trailing_comma = 'all'
 " flow|babylon|typescript|postcss|json|graphql
 let g:prettier#config#parser = 'flow'
 
-autocmd BufWritePre *.js,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync
 
 " Remove whitespaces on save saving cursor position
 " =================================================
