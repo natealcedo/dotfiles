@@ -181,7 +181,7 @@ endif
 
 "-----------------------------------Syntax--------------------------------------
 let g:jsx_ext_required = 0
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js"
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
 
 "---------------------Prettier-------------------------------------
 " max line lengh that prettier will wrap on
