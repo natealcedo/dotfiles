@@ -88,6 +88,7 @@ map <leader><leader>g :call jedi#goto_assignments()<CR>
 map <leader><leader>r :call jedi#rename()<CR>
 map <leader><leader>n :call jedi#usages()<CR>
 nmap <F7> :! clear && python %<CR>
+map <F9> :YcmCompleter FixIt<CR>
 
 "----------------------------------Linting----------------------------------
 set statusline+=%#warningmsg#
@@ -212,6 +213,11 @@ let g:prettier#config#trailing_comma = 'all'
 let g:prettier#config#parser = 'flow'
 
 autocmd BufWritePre *.js,*.jsx,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync
+
+
+" C completion
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
 
 " Remove whitespaces on save saving cursor position
 " =================================================
