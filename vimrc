@@ -89,6 +89,7 @@ map <leader><leader>r :call jedi#rename()<CR>
 map <leader><leader>n :call jedi#usages()<CR>
 nmap <F7> :! clear && python %<CR>
 map <F9> :YcmCompleter FixIt<CR>
+map <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
 
 "----------------------------------Linting----------------------------------
 set statusline+=%#warningmsg#
