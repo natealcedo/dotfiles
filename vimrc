@@ -11,6 +11,7 @@ imap <C-v> <ESC>"+pa
 "---------------------------Vim Plug------------------------------------
 call plug#begin('~/.vim/plugged')
 
+Plug 'tell-k/vim-autopep8'
 Plug 'edkolev/tmuxline.vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'lambdalisue/vim-pyenv'
@@ -54,7 +55,7 @@ let g:airline_powerline_fonts = 1
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 "Python
-autocmd BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80 smarttab expandtab
+autocmd BufNewFile,BufRead *.py set tabstop=8 softtabstop=4 shiftwidth=4 textwidth=80 expandtab
 
 let delimitMate_expand_cr=1
 let g:indentLine_char = '|'
@@ -89,8 +90,10 @@ map <leader><leader>r :call jedi#rename()<CR>
 map <leader><leader>n :call jedi#usages()<CR>
 nmap <F7> :! clear && python %<CR>
 map <F9> :YcmCompleter FixIt<CR>
-nnoremap <silent> <F8> :!clear;gcc % -o %:r -lm<CR>
+autocmd FileType python noremap <buffer> <C-l> :call Autopep8()<CR>
 
+"C
+nnoremap <silent> <F8> :!clear;gcc % -o %:r -lm<CR>
 "----------------------------------Linting----------------------------------
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -110,6 +113,9 @@ let g:syntastic_style_error_symbol = '❌'
 let g:syntastic_warning_symbol = '⚠️'
 let g:syntastic_style_warning_symbol = '💩'
 
+" Auto Pep 8
+let g:autopep8_ignore="E501,E266,E116E501,W293"
+let g:autopep8_disable_show_diff=1
 "-----------------------------vim-multipl-cursors--------------------------------
 let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-k>'
