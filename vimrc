@@ -50,11 +50,11 @@ set laststatus=2
 let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 "-----------------------------------Basic Indenting------------------------
-" Javascript
+" Javascript And all other languages
 set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 "Python
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+autocmd BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80 smarttab expandtab
 
 let delimitMate_expand_cr=1
 let g:indentLine_char = '|'
