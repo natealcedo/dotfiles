@@ -89,7 +89,7 @@ map <leader><leader>r :call jedi#rename()<CR>
 map <leader><leader>n :call jedi#usages()<CR>
 nmap <F7> :! clear && python %<CR>
 map <F9> :YcmCompleter FixIt<CR>
-map <F8> :w <CR> :!gcc % -o %< && ./%< <CR>
+nnoremap <silent> <F8> :!clear;gcc % -o %:r -lm<CR>
 
 "----------------------------------Linting----------------------------------
 set statusline+=%#warningmsg#
@@ -103,11 +103,10 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_python_pylint_args = '--rcfile=/home/nate/.pylintrc'
-
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args='--ignore=E501,E266,E116'
 let g:syntastic_error_symbol = '❌'
-let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_style_error_symbol = '❌'
 let g:syntastic_warning_symbol = '⚠️'
 let g:syntastic_style_warning_symbol = '💩'
 

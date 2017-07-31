@@ -135,7 +135,11 @@ export TERM=xterm-256color
 bind -r '\C-s'
 stty -ixon
 alias vim='/usr/bin/vim'
+alias cvim='/usr/bin/vim -u ~/.cleanvim'
 alias vi='/usr/bin/vim'
 alias v='/usr/bin/vim'
 alias t='tree -I node_modules'
 alias tmux='tmux new -s Development'
+alias pxweb='ssh -p 6655 ubuntu@staging0.oromico.com'
+alias hellofaces='ssh ndaljr@35.185.178.90'
+alias killtmux='pkill -f tmux'
