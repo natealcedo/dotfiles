@@ -93,8 +93,10 @@ set relativenumber
 "==================================================================
 
 "General Key Mappings
+"Buffer jump next
+nmap <C-i> :bnext<CR>
 "Jsdoc
-nmap <silent> <C-i> <Plug>(jsdoc)
+autocmd FileType javascript.jsx nmap <silent> <C-u> <Plug>(jsdoc)
 "Leader key
 let mapleader = ","
 " Auto Indent for files
