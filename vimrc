@@ -1,16 +1,5 @@
-"General Setup
-set nocompatible
-filetype off
-set rtp+=~/.vim/plugged
-set path+=* "Setting Project Path
-let g:NERDTreeHijackNetrw=0 "Prevent Nerd Tree from opening on Start
-filetype plugin indent on "Turns on filetype, plugins and indentation on
-set noswapfile "Turn off swap files
-let g:jsx_ext_required = 0
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
-"==================================================================
-
 "Vim Plug
+set nocompatible "This is required for plugins to work
 call plug#begin('~/.vim/plugged')
 Plug 'tell-k/vim-autopep8'
 Plug 'edkolev/tmuxline.vim'
@@ -47,12 +36,26 @@ Plug 'mitermayer/vim-prettier', {
 call plug#end()
 "==================================================================
 
+" General settings
+filetype plugin indent on "Turns on filetype, plugins and indentation on
+set noswapfile "Turn off swap files
+"==================================================================
+
+"Vim close-tags
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx"
+
+"nerdtree
+let g:NERDTreeHijackNetrw=0 "Prevent Nerd Tree from opening on Start
+
 "Copy and paste
 vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
 "==================================================================
+
+" vim-jsx
+let g:jsx_ext_required = 0 "Disable the need for .jsx file extension
 
 "Airline for vim
 set laststatus=2
@@ -61,11 +64,15 @@ let g:airline_powerline_fonts = 1
 "==================================================================
 
 " Indentation Javascript And all other languages
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
+set tabstop=2 softtabstop=2  shiftwidth=2 textwidth=80 expandtab
 "==================================================================
 
 " Indentation Python
-autocmd BufNewFile,BufRead *.py set tabstop=8 softtabstop=4 shiftwidth=4 textwidth=80 expandtab
+autocmd FileType python set tabstop=8 softtabstop=4 shiftwidth=4 textwidth=80 expandtab
+
+"==================================================================
+" Indentation C
+autocmd FileType c set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=80 expandtab
 "==================================================================
 
 " Markdown preview
