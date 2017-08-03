@@ -39,6 +39,7 @@ call plug#end()
 " General settings
 filetype plugin indent on "Turns on filetype, plugins and indentation on
 set noswapfile "Turn off swap files
+set rtp+=~/.vim/plugged "This is needed for UltiSnips
 "==================================================================
 
 "Vim close-tags
@@ -196,7 +197,7 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
-let g:UltiSnipsSnippetsDir = $HOME.'/.vim/plugged/UltiSnips'
+let g:UltiSnipsSnippetsDir = $HOME/'.vim/plugged/UltiSnips'
 let g:UltiSnipsUsePythonVersion = 2
 "==================================================================
 
