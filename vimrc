@@ -123,6 +123,10 @@ map ; :
 " Markdown previewer
 let vim_markdown_preview_hotkey='<C-m>'
 map <C-g> :NERDTreeToggle<CR>
+" Tabs
+map <C-m> :tabnew<CR>
+map <leader>o :tabnext<CR>
+map <leader>i :tabprevious<CR>
 
 " Python keys
 " Jedi
