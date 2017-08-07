@@ -93,36 +93,46 @@ let g:indentLine_char = '|'
 "==================================================================
 
 " Make backspace work normal editors
-set backspace=2 "
+set backspace=2
 "==================================================================
 
 " Editor Theme
-syntax enable
-let base16colorspace=256
 colorscheme base16-default-dark
+let base16colorspace=256
 set number
 set relativenumber
+syntax enable
 "==================================================================
 
 "General Key Mappings
-"Buffer jump next
-nmap <C-i> :bnext<CR>
+
+"Buffer jump next and previous
+nmap <C-o> :bnext<CR>
+nmap <C-i> :bprevious<CR>
+
 "Jsdoc
 autocmd FileType javascript.jsx nmap <silent> <C-u> <Plug>(jsdoc)
+
 "Leader key
 let mapleader = ","
+
 " Auto Indent for files
 map <C-l> mzgg=G`z
+
 " Save files using control s
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
+
 " Remap escape insert mode
 :inoremap jj <esc>
+
 " This is for easier access of commands
 map ; :
+
 " Markdown previewer
 let vim_markdown_preview_hotkey='<C-m>'
 map <C-g> :NERDTreeToggle<CR>
+
 " Tabs
 map <C-m> :tabnew<CR>
 map <leader>o :tabnext<CR>
@@ -142,15 +152,17 @@ autocmd FileType python noremap <buffer> <C-l> :call Autopep8()<CR>
 " Javascript keys
 autocmd FileType javascript.jsx map<leader><leader>d :YcmCompleter GoTo<CR>
 autocmd FileType javascript.jsx map<leader><leader>g :YcmCompleter GetDoc<CR>
+
 "C
-"Compile C from within file
-nnoremap <silent> <F8> :!clear;gcc % -o %:r -lm<CR>
+autocmd FileType c map<leader><leader>d :YcmCompleter GoTo<CR>
+autocmd FileType c map<leader><leader>t :YcmCompleter GetType<CR>
+autocmd FileType c map<leader><leader>g :YcmCompleter GetDoc<CR>
+autocmd FileType c map<leader><leader>l :YcmCompleter FixIt<CR>
 "==================================================================
 "Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_loc_list_height = 5
 let g:syntastic_auto_loc_list = 0
@@ -174,8 +186,8 @@ let g:autopep8_disable_show_diff=1
 " YouCompleteMe
 " C completion
 let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0 "Prevent YCM from asking everytime we open a directory containing this file
 "==================================================================
-
 
 "Vim Multiple Cursors
 let g:multi_cursor_next_key='<C-n>'
