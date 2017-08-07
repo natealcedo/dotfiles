@@ -130,15 +130,18 @@ map <leader>i :tabprevious<CR>
 
 " Python keys
 " Jedi
-map <leader><leader>d :call jedi#goto_definitions()<CR>
-map <leader><leader>g :call jedi#goto_assignments()<CR>
-map <leader><leader>r :call jedi#rename()<CR>
-map <leader><leader>n :call jedi#usages()<CR>
+autocmd FileType python map <leader><leader>d :call jedi#goto_definitions()<CR>
+autocmd FileType python map <leader><leader>g :call jedi#goto_assignments()<CR>
+autocmd FileType python map <leader><leader>r :call jedi#rename()<CR>
+autocmd FileType python map <leader><leader>n :call jedi#usages()<CR>
 " Run current python script from within vim
-nmap <F7> :! clear && python %<CR>
+autocmd FileType python nmap <F7> :! clear && python %<CR>
 " Auto Fix python script using autopep8
 autocmd FileType python noremap <buffer> <C-l> :call Autopep8()<CR>
 
+" Javascript keys
+autocmd FileType javascript.jsx map<leader><leader>d :YcmCompleter GoTo<CR>
+autocmd FileType javascript.jsx map<leader><leader>g :YcmCompleter GetDoc<CR>
 "C
 "Compile C from within file
 nnoremap <silent> <F8> :!clear;gcc % -o %:r -lm<CR>
