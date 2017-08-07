@@ -1,20 +1,28 @@
 "Vim Plug
 set nocompatible "This is required for plugins to work
 call plug#begin('~/.vim/plugged')
-Plug 'tell-k/vim-autopep8'
-Plug 'edkolev/tmuxline.vim'
-Plug 'davidhalter/jedi-vim'
-Plug 'lambdalisue/vim-pyenv'
-Plug 'heavenshell/vim-jsdoc'
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'Raimondi/delimitMate'
+Plug 'SirVer/ultisnips'
+Plug 'Valloric/YouCompleteMe'
+Plug 'Yggdroot/indentLine'
 Plug 'alvan/vim-closetag'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'danro/rename.vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'heavenshell/vim-jsdoc'
+Plug 'heavenshell/vim-pydocstring'
+Plug 'justinmk/vim-syntax-extra'
 Plug 'kien/ctrlp.vim'
+Plug 'lambdalisue/vim-pyenv'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'posva/vim-vue'
 Plug 'scrooloose/nerdtree'
+Plug 'tell-k/vim-autopep8'
 Plug 'ternjs/tern_for_vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
@@ -23,13 +31,6 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
-Plug 'Raimondi/delimitMate'
-Plug 'SirVer/ultisnips'
-Plug 'Valloric/YouCompleteMe'
-Plug 'Yggdroot/indentLine'
-Plug 'posva/vim-vue'
-Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'heavenshell/vim-pydocstring'
 Plug 'mitermayer/vim-prettier', {
       \ 'do': 'yarn install',
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
@@ -150,7 +151,7 @@ autocmd FileType python nmap <F7> :! clear && python %<CR>
 autocmd FileType python noremap <buffer> <C-l> :call Autopep8()<CR>
 
 " Javascript keys
-autocmd FileType javascript.jsx map<leader><leader>d :YcmCompleter GoTo<CR>
+autocmd FileType javascript.jsx map<leader><leader>d :YcmCompleter GoToDefinition<CR>
 autocmd FileType javascript.jsx map<leader><leader>g :YcmCompleter GetDoc<CR>
 
 "C
