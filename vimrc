@@ -70,7 +70,7 @@ set tabstop=2 softtabstop=2  shiftwidth=2 textwidth=80 expandtab formatoptions=t
 "==================================================================
 
 " Indentation for Javascript
-autocmd FileType javascript.jsx set tabstop=2 softtabstop=2  shiftwidth=2 textwidth=80 expandtab formatoptions=tqc
+autocmd FileType javascript.jsx set tabstop=2 softtabstop=2  shiftwidth=2 textwidth=80 expandtab
 "==================================================================
 
 " Indentation Python
