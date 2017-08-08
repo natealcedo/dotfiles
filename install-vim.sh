@@ -9,9 +9,6 @@ git clone https://github.com/vim/vim.git
 cd vim
 echo "Configuring Vim"
 echo "===============================\n"
-cd ~
-git clone https://github.com/vim/vim.git
-cd vim
 ./configure --with-features=huge \
             --enable-multibyte \
             --enable-rubyinterp=yes \
@@ -25,7 +22,7 @@ cd vim
 echo "Configuring Done. Making VIMRUNTIMEDIR"
 echo "===============================\n"
 make VIMRUNTIMEDIR=/usr/share/vim/vim80
-echo "Done. Installing vim"
+echo "Making vim run time done. Installing vim"
 echo "===============================\n"
 cd ~/vim
 sudo make install
@@ -36,4 +33,7 @@ sudo update-alternatives --set editor /usr/bin/vim
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/vim 1
 sudo update-alternatives --set vi /usr/bin/vim
 cd ~ && rm -rf ./vim
+echo "Installing vim plugins"
+echo "===============================\n"
+vim -E -c PlugInstall -c q
 echo "\n Script done!"
