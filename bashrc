@@ -153,6 +153,7 @@ alias hellofaces-be='cd ~/hellofaces/hellofaces-be'
 alias hellofaces-fe='cd ~/hellofaces/hellofaces-fe'
 alias hellostaging='ssh ndaljr@35.185.178.90'
 alias killtmux='pkill -f tmux'
+alias tmux="cd ~ && tmux new -s Development"
 alias linh='cd ~/Oromico/pxwebfrontend-linh'
 alias dotfiles='cd ~/dotfiles'
 alias Python='cd ~/Python'
