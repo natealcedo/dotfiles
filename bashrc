@@ -157,6 +157,8 @@ alias tmux="cd ~ && tmux new -s Development"
 alias linh='cd ~/Oromico/pxwebfrontend-linh'
 alias dotfiles='cd ~/dotfiles'
 alias Python='cd ~/Python'
+alias Downloads='cd ~/Downloads'
+alias Desktop='cd ~/Desktop'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
