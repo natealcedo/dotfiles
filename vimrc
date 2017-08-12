@@ -17,7 +17,6 @@ Plug 'heavenshell/vim-jsdoc'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'justinmk/vim-syntax-extra'
 Plug 'kien/ctrlp.vim'
-Plug 'lambdalisue/vim-pyenv'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
@@ -74,7 +73,7 @@ autocmd FileType javascript.jsx set tabstop=2 softtabstop=2  shiftwidth=2 textwi
 "==================================================================
 
 " Indentation Python
-autocmd FileType python set tabstop=8 softtabstop=4 shiftwidth=4 expandtab formatoptions=tqc
+autocmd FileType python set tabstop=8 softtabstop=4 shiftwidth=4 expandtab
 
 "==================================================================
 " Indentation C
@@ -299,15 +298,3 @@ function! <SID>StripTrailingWhitespaces()
   %s/\s\+$//e
   call cursor(l, c)
 endfun
-
-if jedi#init_python()
-  function! s:jedi_auto_force_py_version() abort
-    let major_version = pyenv#python#get_internal_major_version()
-    call jedi#force_py_version(major_version)
-  endfunction
-  augroup vim-pyenv-custom-augroup
-    autocmd! *
-    autocmd User vim-pyenv-activate-post   call s:jedi_auto_force_py_version()
-    autocmd User vim-pyenv-deactivate-post call s:jedi_auto_force_py_version()
-  augroup END
-endif
