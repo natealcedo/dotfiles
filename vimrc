@@ -74,7 +74,7 @@ autocmd FileType javascript.jsx set tabstop=2 softtabstop=2  shiftwidth=2 textwi
 "==================================================================
 
 " Indentation Python
-autocmd FileType python set tabstop=8 softtabstop=4 shiftwidth=4 textwidth=80 expandtab formatoptions=tqc
+autocmd FileType python set tabstop=8 softtabstop=4 shiftwidth=4 expandtab formatoptions=tqc
 
 "==================================================================
 " Indentation C
