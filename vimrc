@@ -84,6 +84,7 @@ set backspace=2
 " Editor Theme
 colorscheme base16-default-dark
 let base16colorspace=256
+set number
 set relativenumber
 syntax enable
 
