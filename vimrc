@@ -92,6 +92,9 @@ syntax enable
 "Buffer jump next and previous
 nmap <C-o> :bnext<CR>
 nmap <C-i> :bprevious<CR>
+nmap <F9>  :cprevious<CR>
+nmap <F10> :cnext<CR>
+
 
 "Jsdoc
 autocmd FileType javascript.jsx nmap <silent> <C-u> <Plug>(jsdoc)
