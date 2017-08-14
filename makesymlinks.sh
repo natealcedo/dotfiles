@@ -16,12 +16,15 @@ echo "...done"
 for file in $files
 do
   echo "Creating symlink to $file in home directory."
+  echo "$dir/$file"
   ln -s $dir/$file ~/.$file
 done
 
 echo "Making UltiSnips Directory"
 cd $dir/vim/plugged/ && mkdir UltiSnips
+cd $dir
 echo "Transferring Snippets"
 cp  $dir/javascript.snippets $dir/vim/plugged/UltiSnips/
 cp  $dir/python.snippets $dir/vim/plugged/UltiSnips/
+cd $dir/vim && rm -rf ./vim ./.vim # I dont know why the vim files are being copied
 echo "Done"
