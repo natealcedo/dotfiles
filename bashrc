@@ -179,35 +179,49 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 export TERM=xterm-256color
 
-
+# These two are something to do with Control S not haning the terminal
 bind -r '\C-s'
 stty -ixon
-alias vim='/usr/bin/vim'
-alias cvim='/usr/bin/vim -u ~/.cleanvim'
-alias vi='/usr/bin/vim'
-alias v='/usr/bin/vim'
-alias t='tree -I node_modules'
-alias tmux='tmux new -s Development'
+
+# Aliases
+
+# Folders
+alias Desktop='cd ~/Desktop'
+alias Downloads='cd ~/Downloads'
 alias Oromico='cd ~/Oromico'
-alias pxstaging='ssh -p 6655 ubuntu@staging0.oromico.com'
-alias pxweb='cd ~/Oromico/pxweb'
-alias pxbase='cd ~/Oromico/pxbase'
-alias pxmisc='cd ~/Oromico/pxmisc'
-alias pxbebase='cd ~/Oromico/pxbebase'
-alias pxreporter='cd ~/Oromico/pxreporter'
-alias pxprocessor='cd ~/Oromico/pxprocessor'
+alias Python='cd ~/Python'
+alias cvim='/usr/bin/vim -u ~/.cleanvim'
+alias dotfiles='cd ~/dotfiles'
 alias hf='cd ~/hellofaces'
 alias hfbe='cd ~/hellofaces/hellofaces-be'
 alias hffe='cd ~/hellofaces/hellofaces-fe'
 alias hfst='ssh ndaljr@35.185.178.90'
-alias killtmux='pkill -f tmux'
-alias tmux="cd ~ && tmux new -s Development"
 alias linh='cd ~/Oromico/pxwebfrontend-linh'
-alias dotfiles='cd ~/dotfiles'
-alias Python='cd ~/Python'
-alias Downloads='cd ~/Downloads'
-alias Desktop='cd ~/Desktop'
+alias pxbase='cd ~/Oromico/pxbase'
+alias pxbebase='cd ~/Oromico/pxbebase'
+alias pxmisc='cd ~/Oromico/pxmisc'
+alias pxprocessor='cd ~/Oromico/pxprocessor'
+alias pxreporter='cd ~/Oromico/pxreporter'
+alias pxweb='cd ~/Oromico/pxweb'
+alias td="cd ~ && tmux new -s Development"
+alias tmux="cd ~ && tmux"
+alias tn="cd ~ && tmux new -s"
 
+# Tmux stuff
+alias t='tree -I node_modules'
+alias tls="tmux list-session"
+alias tk="tmux kill-session -t"
+alias tkall='pkill -f tmux'
+
+# ssh stuff
+alias pxstaging='ssh -p 6655 ubuntu@staging0.oromico.com'
+
+# Vim stuff aka the good shit
+alias v='/usr/bin/vim'
+alias vi='/usr/bin/vim'
+alias vim='/usr/bin/vim'
+
+# Nvm shit
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
