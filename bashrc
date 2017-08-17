@@ -213,6 +213,9 @@ alias tls="tmux list-session"
 alias tk="tmux kill-session -t"
 alias tkall='pkill -f tmux'
 
+# Refactoring Stuff
+alias grepfind="grep -rI --exclude-dir={.git,.hg,node_modules,*.egg-info,.idea} --exclude={*.md,*.json,.coveragerc,.hgignore,*.ini,*.txt,.gitignore,.python-version,setup.py} --color=auto"
+
 # ssh stuff
 alias pxstaging='ssh -p 6655 ubuntu@staging0.oromico.com'
 
