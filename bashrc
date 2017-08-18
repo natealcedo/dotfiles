@@ -190,7 +190,6 @@ alias Desktop='cd ~/Desktop'
 alias Downloads='cd ~/Downloads'
 alias Oromico='cd ~/Oromico'
 alias Python='cd ~/Python'
-alias cvim='/usr/bin/vim -u ~/.cleanvim'
 alias dotfiles='cd ~/dotfiles'
 alias hf='cd ~/hellofaces'
 alias hfbe='cd ~/hellofaces/hellofaces-be'
@@ -225,6 +224,8 @@ alias pxstaging='ssh -p 6655 ubuntu@staging0.oromico.com'
 alias v='/usr/bin/vim'
 alias vi='/usr/bin/vim'
 alias vim='/usr/bin/vim'
+alias cvim='/usr/bin/vim -u ~/.cleanvim'
+alias gitvim='/usr/bin/vim -u ~/.gitvim'
 
 # Nvm shit
 export NVM_DIR="$HOME/.nvm"

@@ -201,4 +201,3 @@ let g:prettier#config#trailing_comma = 'none'
 " flow|babylon|typescript|postcss|json|graphql
 let g:prettier#config#parser = 'flow'
 
-autocmd BufWritePre *.js,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync
