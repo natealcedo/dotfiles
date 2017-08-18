@@ -198,7 +198,6 @@ alias hffe='cd ~/hellofaces/hellofaces-fe'
 alias hfst='ssh ndaljr@35.185.178.90'
 alias linh='cd ~/Oromico/pxwebfrontend-linh'
 alias pxbase='cd ~/Oromico/pxbase'
-alias pxbebase='cd ~/Oromico/pxbebase'
 alias pxmisc='cd ~/Oromico/pxmisc'
 alias pxprocessor='cd ~/Oromico/pxprocessor'
 alias pxreporter='cd ~/Oromico/pxreporter'
@@ -215,6 +214,9 @@ alias tkall='pkill -f tmux'
 
 # Refactoring Stuff
 alias grepfind="grep -rI --exclude-dir={.git,.hg,node_modules,*.egg-info,.idea} --exclude={*.md,*.json,.coveragerc,.hgignore,*.ini,*.txt,.gitignore,.python-version,setup.py} --color=auto"
+
+# Git helpers
+alias rebase="git rebase HEAD~2 -i"
 
 # ssh stuff
 alias pxstaging='ssh -p 6655 ubuntu@staging0.oromico.com'
