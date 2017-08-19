@@ -187,6 +187,7 @@ stty -ixon
 
 # Folders
 alias Desktop='cd ~/Desktop'
+alias sjs='cd ~/side-projects/secretsantajs'
 alias Downloads='cd ~/Downloads'
 alias Oromico='cd ~/Oromico'
 alias Python='cd ~/Python'
@@ -194,7 +195,6 @@ alias dotfiles='cd ~/dotfiles'
 alias hf='cd ~/hellofaces'
 alias hfbe='cd ~/hellofaces/hellofaces-be'
 alias hffe='cd ~/hellofaces/hellofaces-fe'
-alias hfst='ssh ndaljr@35.185.178.90'
 alias linh='cd ~/Oromico/pxwebfrontend-linh'
 alias pxbase='cd ~/Oromico/pxbase'
 alias pxmisc='cd ~/Oromico/pxmisc'
@@ -204,6 +204,7 @@ alias pxweb='cd ~/Oromico/pxweb'
 alias td="cd ~ && tmux new -s Development"
 alias tmux="cd ~ && tmux"
 alias tn="cd ~ && tmux new -s"
+alias sjsstaging="ssh ndaljr@35.187.246.224"
 
 # Tmux stuff
 alias t='tree -I node_modules'
