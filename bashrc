@@ -216,7 +216,27 @@ alias tkall='pkill -f tmux'
 alias grepfind="grep -rI --exclude-dir={.git,.hg,node_modules,*.egg-info,.idea} --exclude={*.md,*.json,.coveragerc,.hgignore,*.ini,*.txt,.gitignore,.python-version,setup.py} --color=auto"
 
 # Git helpers
-alias rebase="git rebase HEAD~2 -i"
+alias add="git add"
+alias branch="git branch"
+alias bisect="git bisect"
+alias checkout="git checkout"
+alias clean="git clean"
+alias clone="git clone"
+alias commit="git commit"
+alias diff="git diff"
+alias fetch="git fetch"
+alias merge="git merge"
+alias l="git l"
+alias pull="git pull"
+alias push="git push"
+alias rb="git rebase HEAD~2 -i"
+alias rebase="git rebase"
+alias reset="git reset"
+alias rs="git reset HEAD"
+alias stash="git stash"
+alias status="git status"
+alias show="git show"
+alias tag="git tag"
 
 # ssh stuff
 alias pxstaging='ssh -p 6655 ubuntu@staging0.oromico.com'
