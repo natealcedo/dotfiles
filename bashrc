@@ -243,6 +243,7 @@ alias pxstaging='ssh -p 6655 ubuntu@staging0.oromico.com'
 
 # Vim stuff aka the good shit
 alias v='/usr/bin/vim'
+alias v.='/usr/bin/vim .'
 alias vi='/usr/bin/vim'
 alias vim='/usr/bin/vim'
 alias cvim='/usr/bin/vim -u ~/.cleanvim'
