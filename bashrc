@@ -239,7 +239,7 @@ alias show="git show"
 alias tag="git tag"
 
 # ssh stuff
-alias pxstaging='ssh -p 6655 ubuntu@staging0.oromico.com'
+alias pxdev='ssh -p 6655 ubuntu@dev.oromico.com'
 
 # Vim stuff aka the good shit
 alias v='/usr/bin/vim'

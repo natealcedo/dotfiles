@@ -87,6 +87,7 @@ let base16colorspace=256
 set number
 set relativenumber
 syntax enable
+let g:javascript_plugin_jsdoc = 1
 
 "General Key Mappings
 "Buffer jump next and previous
