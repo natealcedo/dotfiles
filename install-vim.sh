@@ -13,9 +13,9 @@ echo "===============================\n"
             --enable-multibyte \
             --enable-rubyinterp=yes \
             --enable-pythoninterp=yes \
-            --with-python-config-dir=/home/nate/opt/pyenv/versions/2.7.13/lib/python2.7/config \
+            --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu \
             --enable-python3interp=yes \
-            --with-python3-config-dir=/usr/lib/python3.5/config \
+            --with-python3-config-dir=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu \
             --enable-perlinterp=yes \
             --enable-luainterp=yes \
             --enable-gui=gtk2 --enable-cscope --prefix=/usr
