@@ -104,6 +104,7 @@ nmap <F10> :cnext<CR>
 
 "Jsdoc
 autocmd FileType javascript.jsx nmap <silent> <C-u> <Plug>(jsdoc)
+autocmd FileType javascript.jsx nmap <F7> :! clear && babel-node  %<CR>
 
 "Leader key
 let mapleader = ","
@@ -207,7 +208,7 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<C-h>'
 
 "ControlP
-set wildignore+=**/bower_components/*,**/node_modules/*,**/tmp/*,**/assets/images/*,**/assets/fonts/*,**/public/images/*
+set wildignore+=**/bower_components/*,**/node_modules/*,**/tmp/*,**/assets/images/*,**/assets/fonts/*,**/public/images/*,*.pyc
 
 "Ternjs
 autocmd CompleteDone * pclose "Not sure What this does currently
@@ -252,6 +253,9 @@ augroup Mkdir
         \ call mkdir(expand("<afile>:p:h"), "p") |
         \ endif
 augroup END
+
+"Nerd Tree ignore
+let NERDTreeIgnore = ['\.pyc$']
 
 "CtrlP auto cache clearing.
 function! SetupCtrlP()
