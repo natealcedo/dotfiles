@@ -1,6 +1,7 @@
 "Vim Plug
 set nocompatible "This is required for plugins to work
 call plug#begin('~/.vim/plugged')
+Plug 'ekalinin/Dockerfile.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'

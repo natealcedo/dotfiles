@@ -249,6 +249,8 @@ alias vim='/usr/bin/vim'
 alias cvim='/usr/bin/vim -u ~/.cleanvim'
 alias gitvim='/usr/bin/vim -u ~/.gitvim'
 
+alias oropull='~/Desktop/git-update.sh'
+
 # Nvm shit
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
