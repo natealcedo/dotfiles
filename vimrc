@@ -1,7 +1,6 @@
 "Vim Plug
 set nocompatible "This is required for plugins to work
 call plug#begin('~/.vim/plugged')
-Plug 'ekalinin/Dockerfile.vim'
 Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
@@ -13,7 +12,9 @@ Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'danro/rename.vim'
 Plug 'davidhalter/jedi-vim'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'edkolev/tmuxline.vim'
+Plug 'ekalinin/Dockerfile.vim'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'justinmk/vim-syntax-extra'
@@ -34,10 +35,10 @@ Plug 'mitermayer/vim-prettier', {
       \ 'do': 'npm install',
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
 Plug 'lambdalisue/vim-pyenv', {
-        \ 'depends': ['davidhalter/jedi-vim'],
-        \ 'autoload': {
-        \   'filetypes': ['python', 'python3'],
-        \ }}
+      \ 'depends': ['davidhalter/jedi-vim'],
+      \ 'autoload': {
+      \   'filetypes': ['python', 'python3'],
+      \ }}
 call plug#end()
 
 " General settings
@@ -48,6 +49,9 @@ set rtp+=~/.vim/plugged "This is needed for UltiSnips
 "Plugins
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx" "Vim close-tags
 let g:NERDTreeHijackNetrw=0 "Prevent Nerd Tree from opening on Start
+
+"Editor config config
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 "Copy and paste
 vmap <C-c> "+yi
