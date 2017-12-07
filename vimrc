@@ -245,6 +245,10 @@ let g:jedi#show_call_signatures_delay = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#completions_command = "<C-j>"
 
+"Tmux
+let g:airline#extensions#tmuxline#enabled = 1
+let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
+
 "Custom Scripts
 
 "Create/Open file in current folder
