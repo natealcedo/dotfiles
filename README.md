@@ -24,4 +24,9 @@ __This is a todo__
 1. Use the adobe source pro font instsalled from the fonts for vim-powerline/airline. Gives abit of margin between lines.
    This helps with using Vim on Ubuntu since gnome terminal doe'snt give the ability to do this manually
 
+### Make Unity look good
+1. Use flat theme
+2. Plank for dock
+3. And make boxes transparent
+
 #Enjoy!
