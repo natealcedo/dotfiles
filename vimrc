@@ -30,7 +30,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 Plug 'mitermayer/vim-prettier', {
       \ 'do': 'npm install',
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql'] }
@@ -179,23 +179,36 @@ let g:prettier#config#parser = 'flow'
 "Prettier Async
 autocmd BufWritePre *.js,*.jsx,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync
 
+"Ale
+let g:ale_python_flake8_args = '--ignore=E501,E266,E116E501,W293,F405,F403,F401'
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'python': ['flake8', 'pylint'],
+\}
+let g:airline#extensions#ale#enabled = 1
+nmap <leader><leader>k <Plug>(ale_previous_wrap)
+nmap <leader><leader>l <Plug>(ale_next_wrap)
+let g:ale_sign_column_always = 1
+
 "Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
-let g:syntastic_python_checkers = ['flake8', 'pylint']
-let g:syntastic_python_flake8_args='--ignore=E501,E266,E116E501,W293,F405,F403,F401'
-let g:syntastic_error_symbol = '❌'
-let g:syntastic_style_error_symbol = '❌'
-let g:syntastic_warning_symbol = '⚠️'
-let g:syntastic_style_warning_symbol = '💩'
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_loc_list_height = 5
+" let g:syntastic_auto_loc_list = 0
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 1
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
+" let g:syntastic_python_checkers = ['flake8', 'pylint']
+" let g:syntastic_python_flake8_args='--ignore=E501,E266,E116E501,W293,F405,F403,F401'
+" let g:syntastic_error_symbol = '❌'
+" let g:syntastic_style_error_symbol = '❌'
+" let g:syntastic_warning_symbol = '⚠️'
+" let g:syntastic_style_warning_symbol = '💩'
 
 " Auto Pep 8
 let g:autopep8_ignore="E501,E266,E116E501,W293,F405,F403,F401"
