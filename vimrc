@@ -22,7 +22,6 @@ Plug 'kien/ctrlp.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
-Plug 'tell-k/vim-autopep8'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -140,8 +139,6 @@ autocmd FileType python map <leader><leader>r :call jedi#rename()<CR>
 autocmd FileType python map <leader><leader>n :call jedi#usages()<CR>
 " Run current python script from within vim
 autocmd FileType python nmap <F7> :! clear && python %<CR>
-" Auto Fix python script using autopep8
-autocmd FileType python noremap <buffer> <C-l> :call Autopep8()<CR>
 
 " Javascript keys
 autocmd FileType javascript.jsx map<leader><leader>d :YcmCompleter GoToDefinition<CR>
@@ -154,25 +151,22 @@ autocmd FileType c map<leader><leader>g :YcmCompleter GetDoc<CR>
 autocmd FileType c map<leader><leader>l :YcmCompleter FixIt<CR>
 
 "Ale
+let g:ale_sign_column_always = 1
+let g:ale_fixers = {'javascript': ['prettier', 'eslint'], 'python': ['autopep8']}
 let g:ale_python_flake8_args = '--ignore=E501,E266,E116E501,W293,F405,F403,F401'
+let g:ale_python_autopep8_options = '--ignore=E501,E266,E116E501,W293,F405,F403,F401'
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
 let g:ale_linters = {
 \   'javascript': ['eslint'],
-\   'python': ['flake8', 'pylint'],
+\   'python': ['flake8'],
 \}
-let g:ale_fixers = {'javascript': ['prettier', 'eslint']}
 let g:ale_javascript_prettier_options = '--trailing-comma all'
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
 nmap <leader><leader>k <Plug>(ale_previous_wrap)
 nmap <leader><leader>l <Plug>(ale_next_wrap)
-let g:ale_sign_column_always = 1
-
-" Auto Pep 8
-let g:autopep8_ignore="E501,E266,E116E501,W293,F405,F403,F401"
-let g:autopep8_disable_show_diff=1
 
 " YouCompleteMe
 " C completion
