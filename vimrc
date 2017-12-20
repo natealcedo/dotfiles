@@ -152,7 +152,7 @@ autocmd FileType c map<leader><leader>l :YcmCompleter FixIt<CR>
 
 "Ale
 let g:ale_sign_column_always = 1
-let g:ale_fixers = {'javascript': ['prettier', 'eslint'], 'python': ['autopep8']}
+let g:ale_fixers = {'javascript': ['prettier', 'eslint'], 'python': ['autopep8'], 'json': ['prettier']}
 let g:ale_python_flake8_args = '--ignore=E501,E266,E116E501,W293,F405,F403,F401'
 let g:ale_python_autopep8_options = '--ignore=E501,E266,E116E501,W293,F405,F403,F401'
 let g:ale_sign_error = '❌'
