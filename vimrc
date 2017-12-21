@@ -178,6 +178,7 @@ let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-k>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<C-h>'
+nnoremap <silent><C-h> :call multiple_cursors#quit()<CR>
 
 "ControlP
 set wildignore+=**/bower_components/*,**/node_modules/*,**/tmp/*,**/assets/images/*,**/assets/fonts/*,**/public/images/*,*.pyc
