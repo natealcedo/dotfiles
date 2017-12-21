@@ -36,4 +36,9 @@ cd ~ && rm -rf ./vim
 echo "Installing vim plugins"
 echo "===============================\n"
 vim -E -c PlugInstall -c q
+echo "Installing YouCompleteMe"
+echo "===============================\n"
+cd ~/.vim/plugged/YouCompleteMe
+./install.py --js-completer
+cd ~
 echo "\n Script done!"
