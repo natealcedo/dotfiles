@@ -5,7 +5,7 @@
 ############################
 
 dir=~/dotfiles                    # dotfiles directory
-files="bashrc vimrc pylintrc tmux.conf vim gitconfig tern-config gitvim cleanvim"    # list of files/folders to symlink in homedir
+files="bashrc vimrc tmux.conf vim gitconfig tern-config gitvim cleanvim"    # list of files/folders to symlink in homedir
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"
