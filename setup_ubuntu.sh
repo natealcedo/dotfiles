@@ -11,4 +11,7 @@ echo "Installing node and dependencies"
 echo "Building vim from source"
 ./install-vim.sh
 
+echo "Installing fonts"
+sudo apt-get install fonts-powerline
+
 echo "\nRemember to install fonts"
