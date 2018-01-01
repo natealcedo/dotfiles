@@ -39,9 +39,15 @@ set rtp+=~/.vim/plugged "This is needed for UltiSnips
 "Plugins
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.js,*.jsx" "Vim close-tags
 let g:NERDTreeHijackNetrw=0 "Prevent Nerd Tree from opening on Start
+let NERDTreeShowHidden=1
 
 "Editor config config
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+" Control P
+" Show hidden files
+let g:ctrlp_show_hidden = 1
+
 
 "Copy and paste
 vmap <C-c> "+yi
@@ -156,7 +162,7 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'python': ['flake8'],
 \}
-let g:ale_javascript_prettier_options = '--trailing-comma all'
+let g:ale_javascript_prettier_options = '--trailing-comma es5'
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
