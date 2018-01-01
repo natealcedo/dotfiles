@@ -4,13 +4,11 @@
 
 1. Clone this repository
 2. Run `setup_ubuntu.sh`
-3. Run `install-vim.sh`
-4. Run Install.py with the right arguments in YouCompleteMe for
+3. Run Install.py with the right arguments in YouCompleteMe for
    autocompletion(Should this be its own script?)
-5. Run `install_editor_and_node_deps.sh`
-6. Install Powerline Fonts for vim [here](https://github.com/powerline/fonts)
+4. Install Powerline Fonts for vim [here](https://github.com/powerline/fonts)
    (TODO make this into its own script)
-7. Use adobe source pro font medium so that there's abit more margin between
+5. Use adobe source pro font medium so that there's abit more margin between
    lines. Gnome terminal doesn't give the ability to edit this manually unlike
    terminal in mac
 
@@ -28,5 +26,8 @@ __This is a todo__
 1. Use flat theme
 2. Plank for dock
 3. And make boxes transparent
+
+###
+Do [this](https://askubuntu.com/questions/649103/proper-touchpad-thumb-palm-detection-with-libinput/678122#678122) for better palm rejection
 
 #Enjoy!
