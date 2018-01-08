@@ -162,7 +162,6 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'python': ['flake8'],
 \}
-let g:ale_javascript_prettier_options = '--trailing-comma es5'
 let g:ale_javascript_prettier_use_local_config = 1
 let g:ale_fix_on_save = 1
 let g:airline#extensions#ale#enabled = 1
