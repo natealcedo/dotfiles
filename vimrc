@@ -2,6 +2,8 @@
 set nocompatible "This is required for plugins to work
 call plug#begin('~/.vim/plugged')
 Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'ianks/vim-tsx'
+Plug 'leafgarland/typescript-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'SirVer/ultisnips'
 Plug 'Valloric/YouCompleteMe'
@@ -153,7 +155,7 @@ autocmd FileType c map<leader><leader>l :YcmCompleter FixIt<CR>
 
 "Ale
 let g:ale_sign_column_always = 1
-let g:ale_fixers = {'javascript': ['prettier', 'eslint'], 'python': ['autopep8'], 'json': ['prettier']}
+let g:ale_fixers = {'javascript': ['prettier', 'eslint'], 'python': ['autopep8'], 'json': ['prettier'], 'typescript': ['tslint']}
 let g:ale_python_flake8_args = '--ignore=E501,E266,E116E501,W293,F405,F403,F401'
 let g:ale_python_autopep8_options = '--ignore=E501,E266,E116E501,W293,F405,F403,F401'
 let g:ale_sign_error = '❌'
