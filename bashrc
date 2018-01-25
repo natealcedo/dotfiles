@@ -202,6 +202,19 @@ alias tkall='pkill -f tmux'
 # Refactoring Stuff
 alias grepfind="grep -rI --exclude-dir={.git,.hg,node_modules,*.egg-info,.idea} --exclude={*.md,*.json,.coveragerc,.hgignore,*.ini,*.txt,.gitignore,.python-version,setup.py} --color=auto"
 
+# Vim stuff aka the good shit
+alias v='NODE_PATH=$(pwd)/src vim'
+alias v.='NODE_PATH=$(pwd)/src vim .'
+alias vi='NODE_PATH=$(pwd)/src vim'
+alias vim='NODE_PATH=$(pwd)/src vim'
+alias cvim='NODE_PATH=$(pwd)/src vim -u ~/.cleanvim'
+alias gitvim='NODE_PATH=$(pwd)/src vim -u ~/.gitvim'
+
+# Nvm shit
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Git helpers
 alias add="git add"
 alias branch="git branch"
@@ -225,18 +238,7 @@ alias status="git status"
 alias show="git show"
 alias tag="git tag"
 
-# Vim stuff aka the good shit
-alias v='NODE_PATH=$(pwd)/src vim'
-alias v.='NODE_PATH=$(pwd)/src vim .'
-alias vi='NODE_PATH=$(pwd)/src vim'
-alias vim='NODE_PATH=$(pwd)/src vim'
-alias cvim='NODE_PATH=$(pwd)/src vim -u ~/.cleanvim'
-alias gitvim='NODE_PATH=$(pwd)/src vim -u ~/.gitvim'
 
-# Nvm shit
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ###-begin-npm-completion-###
 #
 # npm command completion script
@@ -297,3 +299,24 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+# Add git completion to aliases
+source /usr/share/bash-completion/completions/git
+__git_complete add _git_add
+__git_complete branch _git_branch
+__git_complete bisect _git_bisect
+__git_complete checkout _git_checkout
+__git_complete clean _git_clean
+__git_complete clone _git_clone
+__git_complete commit _git_commit
+__git_complete diff _git_diff
+__git_complete fetch _git_fetch
+__git_complete merge _git_merge
+__git_complete pull _git_pull
+__git_complete push _git_push
+__git_complete rebase _git_rebase
+__git_complete reset _git_reset
+__git_complete stash _git_stash
+__git_complete show _git_show
+__git_complete tag _git_tag
+
